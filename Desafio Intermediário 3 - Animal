@@ -1,0 +1,55 @@
+...
+DESAFIO
+Neste problema, você deverá ler 3 palavras que definem o tipo de animal possível segundo o esquema abaixo, da esquerda para a direita.  Em seguida conclua qual dos animais seguintes foi escolhido, através das três palavras fornecidas.
+
+Entrada
+A entrada contém 3 palavras, uma em cada linha, necessárias para identificar o animal segundo a figura acima, com todas as letras minúsculas.
+
+Saída
+Imprima o nome do animal correspondente à entrada fornecida.
+...
+
+def vert(a, b, c):
+    if a == 'vertebrado':
+        if b == 'ave' and c == 'carnivoro':
+            return 'aguia'  
+        else:
+            return 'pomba' 
+    else:
+        if b == 'mamifero' and c == 'onivoro':
+            return 'homem'
+        else:
+            return 'vaca'  
+        
+def invert(a, b, c):
+    if a == 'invertebrado':
+        if b == 'anelideo' and c == 'hematofago':
+            return 'sanguessuga'  
+        else:
+            return 'minhoca' 
+
+def inset(a, b, c):            
+    if a == 'invertebrado':
+        if b == 'inseto' and c == 'herbivoro':
+            return 'lagarta'  
+        else:
+            return 'pulga'    
+            
+def animais():  
+    a = input() 
+    b = input() 
+    c = input() 
+
+    if a == 'vertebrado': 
+      animal = vert(a, b, c)
+      print(animal)
+    
+    elif a == 'invertebrado': 
+        if b == 'anelideo':
+            animal = invert(a, b, c)  
+            print(animal)
+        else:
+            animal = inset(a, b, c)
+            print(animal)
+            
+animais()  
